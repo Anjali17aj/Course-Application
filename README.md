@@ -1,9 +1,7 @@
-# Course-Application
-A fullstack application using Spring Boot (for the backend REST API) and React.js (for the frontend) involved designing and developing both the server-side and client-side components.
 
 # 📚 Course-Application
 
-A full-stack web application built with **React JS** and **Spring Boot** to manage courses. Users can add, view, and delete courses. JWT-based authentication is being implemented for secure access.
+A full-stack web application built using **Spring Boot** (backend REST API) and **React.js** (frontend) to manage courses. Users can **add**, **view**, and **delete** courses. 
 
 ---
 
@@ -12,28 +10,30 @@ A full-stack web application built with **React JS** and **Spring Boot** to mana
 - ✅ View all courses
 - ✅ Add a new course
 - ✅ Delete existing courses
+- ✅ Toast notifications (success/failure)
 - 📦 Axios for frontend-backend communication
 
 ---
 
 ## 🧱 Tech Stack
 
-### 🔹 Frontend:
-- React JS
+### 🔹 Frontend
+- React.js
 - React Router DOM
 - Axios
 - Reactstrap (Bootstrap for React)
-- React Toastify (notifications)
+- React Toastify
 
-### 🔸 Backend:
+### 🔸 Backend
 - Spring Boot
-- Spring web
-- Spring Rest
-- Maven (dependency management)
+- Spring Web
+- Spring REST
+- MySQL
+- Maven (for dependency management)
 
 ---
 
-## 🖥️ Screenshots
+## 📸 Screenshots
 
 > Coming soon...
 
@@ -41,43 +41,76 @@ A full-stack web application built with **React JS** and **Spring Boot** to mana
 
 ## 🛠️ Setup Instructions
 
-### 📦 Backend (Spring Boot)
-1. Open the backend in any IDE (e.g., IntelliJ, Eclipse).
-2. Make sure Java 17+ and Maven are installed.
-3. Configure `application.properties` for your DB 
-4. Run the application:
+### 📌 Prerequisites
+
+- Java 17 or later
+- Maven
+- Node.js (v18+)
+- npm or yarn
+- MySQL or any supported relational database (if using DB)
+- IDE (e.g., IntelliJ, Eclipse for backend | VS Code for frontend)
+
+---
+
+## 🔧 Backend Setup (Spring Boot)
+
+1. Clone the project.
+2. Navigate to the backend folder.
+3. Open it in your preferred IDE (Eclipse/IntelliJ).
+4. Ensure Java 17+ and Maven are configured.
+5. Configure your `application.properties` with the correct database and port if needed.
+6. Run the application:
 
 ```bash
 mvn spring-boot:run
+```
 
+### ➤ API Endpoints
 
-# 🛠️ Setup Instructions
+| Method | Endpoint            | Description              |
+|--------|---------------------|--------------------------|
+| GET    | `/courses`          | Fetch all courses        |
+| POST   | `/courses`          | Add a new course         |
+| DELETE | `/courses/{id}`     | Delete a course by ID    |
 
-### 🧑‍💻 Prerequisites:
-- Node.js (v18+)
-- npm or yarn
-- Backend server running at `http://localhost:8081`
+---
 
-### ▶️ Start the React App:
+## 🎨 Frontend Setup (React.js)
+
+1. Navigate to the frontend project directory (e.g., `cd course-app`).
+2. Install dependencies:
 
 ```bash
-cd course-app
 npm install
+```
+
+3. Start the frontend server:
+
+```bash
 npm start
+```
 
+> Make sure the backend is running on `http://localhost:8081`
 
-### 🔧 Backend (Spring Boot)
-- `GET /courses`: Get all courses
-- `POST /courses`: Add a new course
-- `DELETE /courses/{id}`: Delete a course by ID
+---
 
-### 🎨 Frontend (React)
-- Display list of courses
-- Add a new course using a form
-- Delete course using a button
-- Toast notifications (success/failure)
-- Responsive design using Bootstrap (via Reactstrap)
+### 📦 Axios Configuration
 
+In your `base_url.js` file:
+
+```js
 const base_url = "http://localhost:8081";
 export default base_url;
+```
 
+---
+
+## ✅ Functionality Overview
+
+- Display a list of all courses
+- Add a new course through a form
+- Delete a course with a button click
+- Display toast messages for success or failure
+- Responsive UI using Reactstrap (Bootstrap)
+
+---
