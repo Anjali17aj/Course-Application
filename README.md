@@ -111,6 +111,6 @@ export default base_url;
 - Add a new course through a form
 - Delete a course with a button click
 - Display toast messages for success or failure
-- Responsive UI using Reactstrap (Bootstrap)
+- Responsive UI using React.js
 
 ---
