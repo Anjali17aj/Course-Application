@@ -80,7 +80,7 @@ mvn spring-boot:run
 
 ## 🎨 Frontend Setup (React.js)
 
-1. Navigate to the frontend project directory (e.g., `cd course-app`).
+1. Navigate to the frontend project directory (e.g., `cd course-application`).
 2. Install dependencies:
 
 ```bash
