@@ -9,6 +9,10 @@ import AddCourse from './components/AddCourse';
 import Header from './components/Header';
 import Menus from './components/Menu';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from './components/about';
+import Contact from './components/contact';
+
+
 
 function App() {
   const btnHandle = () => {
@@ -32,6 +36,9 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/add-course" element={<AddCourse />} />
                 <Route path="/view-courses" element={<AllCourses />} />
+                 <Route path="/about" element={<About />} />
+                 <Route path="/contact" element={<Contact />} />
+
               </Routes>
             </Col>
           </Row>
